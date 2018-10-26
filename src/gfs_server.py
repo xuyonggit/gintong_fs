@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-from lib.server.filesystem_server import operator
 import threading
 import configparser
 import os,sys
-
 MAINPATH = sys.path[1]
+sys.path.append(MAINPATH)
+from lib.server.filesystem_server import operator
+
 cf = configparser.ConfigParser()
 cf.read(os.path.join(os.path.join(MAINPATH, 'config'), 'server'), encoding='utf-8')
 
